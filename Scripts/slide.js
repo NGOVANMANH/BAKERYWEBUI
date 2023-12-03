@@ -19,7 +19,7 @@ const slideImages = [
     }
 ]
 
-const root = document.querySelector("#root");
+const root = document.querySelector("#root2");
 
 slideImages.forEach((item, index) => {
     const img = document.createElement("img");

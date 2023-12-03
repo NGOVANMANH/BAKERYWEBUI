@@ -1,0 +1,26 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    background-color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.horizontal-line {
+    height: 1px;
+    background: white;
+}
