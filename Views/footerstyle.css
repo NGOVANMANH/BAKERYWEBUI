@@ -6,14 +6,19 @@
     width: 209px;
 }
 
+.form-wrapper {
+    border: 1px solid white;
+    padding: 2px;
+    border-radius: 4rem;
+}
+
 .form-wrapper>input {
-    border-radius: 0;
     border-top-left-radius: 4rem;
     border-bottom-left-radius: 4rem;
     outline: transparent;
-    border: 1px solid white;
     border-right: transparent;
     background: transparent;
+    border: none;
 }
 
 .form-wrapper>input:focus {
@@ -32,8 +37,6 @@
     border-left: 1px solid green;
     background-color: #f6780a;
     color: white;
-    border: 1px solid white;
-    border-left: transparent;
 }
 
 .form-wrapper>button:hover {

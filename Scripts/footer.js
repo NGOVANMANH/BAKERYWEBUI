@@ -39,7 +39,7 @@ $(document).ready(() => {
                             <div class="row form-wrapper mb-5">
                                 <input type="email" name="emai" class="form-control col p-3 fs-3"
                                     placeholder="Email của bạn...">
-                                <button type="button" class="col-md-3  fs-3">Đăng kí</button>
+                                <button type="button" class="col-md-3  fs-3" onclick="handleSendEmail()">Đăng kí</button>
                             </div>
                         </div>
                     </div>
@@ -120,3 +120,4 @@ $(document).ready(() => {
     </div>
     `);
 })
+

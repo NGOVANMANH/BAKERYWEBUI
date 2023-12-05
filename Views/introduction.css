@@ -1,0 +1,55 @@
+.about_line {
+    height: 6px;
+    width: 112px;
+    margin: 20px auto;
+    background: #FFC600;
+}
+
+.slogan {
+    padding: 7rem 7rem 0 7rem;
+}
+
+.slogan_title {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.slogan_sub_title {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+    color: #3D3D3D;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.box_list_item {
+    padding-bottom: 6rem;
+}
+
+.box_list_item_img {
+    padding: 0;
+}
+
+.box_list_item_content {
+    padding: 4.5rem;
+    background: #FCF8F0;
+}
+
+.box_list_item_content_title {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 2rem;
+}
+
+.box_list_item_content_title_description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}
