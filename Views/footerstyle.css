@@ -10,6 +10,7 @@
     border: 1px solid white;
     padding: 2px;
     border-radius: 4rem;
+    width: 90%;
 }
 
 .form-wrapper>input {
@@ -19,6 +20,7 @@
     border-right: transparent;
     background: transparent;
     border: none;
+    color: #ffff !important;
 }
 
 .form-wrapper>input:focus {

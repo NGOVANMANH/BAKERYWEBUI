@@ -625,33 +625,4 @@ const products = [
     },
 ]
 
-
-const root = document.querySelector("#root");
-
-products.forEach((item, index) => {
-
-    const img = document.createElement("img");
-    img.src = item.image;
-    img.alt = `slide-${index}`;
-
-    const id = document.createElement("span");
-    id.innerText = `${item.id}`;
-
-    const name = document.createElement("span");
-    name.innerText = `${item.name}`;
-
-    const price = document.createElement("span");
-    price.innerText = `${item.price}`;
-
-    const description = document.createElement("span");
-    description.innerText = `${item.description}`;
-
-    const div = document.createElement("div");
-    div.appendChild(img);
-    div.appendChild(id);
-    div.appendChild(name);
-    div.appendChild(price);
-    div.appendChild(description);
-
-    root.appendChild(div);
-});
+export default products;

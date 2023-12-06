@@ -19,11 +19,4 @@ const slideImages = [
     }
 ]
 
-const root = document.querySelector("#root2");
-
-slideImages.forEach((item, index) => {
-    const img = document.createElement("img");
-    img.src = item.image;
-    img.alt = `slide-${index}`;
-    root.appendChild(img);
-});
+export default slideImages;

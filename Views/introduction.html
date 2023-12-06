@@ -16,12 +16,22 @@
     <link rel="stylesheet" href="globalstyle.css">
     <link rel="stylesheet" href="footerstyle.css">
     <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" href="headerbackground.css">
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="main">
+        <div class="position-relative sub_header" tabindex="-1">
+            <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+            <div class="header_title container">
+                <div class="page_title">Giới thiệu</div>
+                <div class="navigate_title d-flex align-items-center justify-content-center">
+                    <a href="index.html">Trang chủ&nbsp;</a> / Giới thiệu
+                </div>
+            </div>
+        </div>
         <div class="slogan container">
             <div class="slogan_title">TẠI BREADTALK VIETNAM, KHÔNG CHỈ BÁNH MÌ LÀ “BIẾT NÓI”</div>
             <div class="slogan_sub_title">Chúng tôi Nói - Nghệ Nhân Nói - Thế giới Nói</div>
@@ -100,7 +110,13 @@
     </div>
 
     <div id="footer"></div>
-    <script src="../Scripts/footer.js" type="module"></script>
+
+    <script type="module">
+        import renderFooter from '../Scripts/footer.js';
+        import validateEmail from '../Scripts/validateEmail.js';
+        renderFooter();
+    </script>
+
 </body>
 
 </html>

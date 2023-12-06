@@ -15,12 +15,22 @@
     <!-- Add style -->
     <link rel="stylesheet" href="globalstyle.css">
     <link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="headerbackground.css">
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="main">
+        <div class="position-relative sub_header" tabindex="-1">
+            <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+            <div class="header_title container">
+                <div class="page_title">Tuyển dụng</div>
+                <div class="navigate_title d-flex align-items-center justify-content-center">
+                    <a href="index.html">Trang chủ&nbsp;</a> / Tuyển dụng
+                </div>
+            </div>
+        </div>
         <div class="container d-flex justify-content-center pt-5 pb-5">
             <div class="col-md-8">
                 <p><strong>BreadTalk</strong> đang mở rộng nhanh chóng, vì vậy, chúng tôi luôn muốn tìm những thành
@@ -45,12 +55,14 @@
                     Các cơ sở BreadTalk tại Hồ Chí Minh, Phú Quốc, Hà Nội, Hải Phòng, và Nha Trang</p>
             </div>
         </div>
-        <div class="pb-5"></div>
-        <div class="pb-5"></div>
     </div>
 
     <div id="footer"></div>
-    <script src="../Scripts/footer.js" type="module"></script>
+    <script type="module">
+        import renderFooter from '../Scripts/footer.js';
+        renderFooter();
+    </script>
+
 </body>
 
 </html>

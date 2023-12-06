@@ -20,6 +20,8 @@
 </head>
 
 <body>
+    <a href="introduction.html">Giới thiệu</a>
+    <a href="recruitment.html">Tuyển dụng</a>
     <div id="header">
         this is header
     </div>
@@ -28,9 +30,12 @@
         this is main
     </div>
 
-    <div id="footer">
-    </div>
-    <script src="../Scripts/footer.js" type="module"></script>
+    <div id="footer"></div>
+    <script type="module">
+        import renderFooter from '../Scripts/footer.js';
+        renderFooter();
+    </script>
+
 </body>
 
 </html>
