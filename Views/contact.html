@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu - BreadTalk</title>
+    <title>Liên hệ - BreadTalk</title>
     <!-- Add jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Add bootstrap -->
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="footerstyle.css">
     <link rel="stylesheet" href="introduction.css">
     <link rel="stylesheet" href="headerbackground.css">
+    <link rel="stylesheet" href="contact.css">
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
 </head>
@@ -32,8 +33,106 @@
                 </div>
             </div>
         </div>
-        <div>
-            lien hẹ tao
+        <div class="mt-5"></div>
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <form class="message_form col" action="#">
+                    <div class="row">
+                        <div class="col">
+                            <label for="name_box" class="form-label">Họ và tên</label>
+                            <input type="text" class="form-control" id="name_box">
+                        </div>
+                        <div class="col">
+                            <label for="email_box" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email_box">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="content_box" class="form-label">Nội dung</label>
+                            <textarea class="form-control" id="content_box" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-auto">
+                            <button type="button" class="btn_send_email">Gửi tin nhắn</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="col">
+                    <div class="row">
+                        <div class="col">
+                            <div class="infomation_title">CÔNG TY CỔ PHẦN BÌNH MINH TOÀN CẦU</div>
+                            <div class="infomation_list">
+                                <div class="infomation_inner">
+                                    <div class="infomation_svg" style="margin-right: 4px;">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                    </div>
+                                    <div class="infomation_text">36-36A Âu Cơ, Phường 9, Quận Tân Bình, TP. HCM</div>
+                                </div>
+                                <a href="mailto:info@breadtalkvietnam.com">
+                                    <div class="infomation_inner">
+                                        <div class="infomation_svg">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div class="infomation_text">info@breadtalkvietnam.com</div>
+                                    </div>
+                                </a>
+                                <a href="tel:02837751727">
+                                    <div class="infomation_inner">
+                                        <div class="infomation_svg">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="infomation_text">0283 7751727 (08h00 – 17h00); 0283 5358936 (07h00 –
+                                            22h00)</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="infomation_title">
+                                Theo dõi chúng tôi </div>
+                            <div class="infomation_list d-flex">
+                                <a href="https://www.facebook.com/">
+                                    <div class="infomation_inner social_media_link">
+                                        <div class="infomation_svg">
+                                            <i class="fa-brands fa-facebook"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://twitter.com/">
+                                    <div class="infomation_inner social_media_link">
+                                        <div class="infomation_svg">
+                                            <i class="fa-brands fa-twitter"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.youtube.com/">
+                                    <div class="infomation_inner social_media_link">
+                                        <div class="infomation_svg">
+                                            <i class="fa-brands fa-youtube"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/">
+                                    <div class="infomation_inner social_media_link">
+                                        <div class="infomation_svg">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5"></div>
+        <div class="google_map">
+            <iframe class="w-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.023524736844!2d106.69719467488186!3d10.732668889413429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b2747a81a3%3A0x33c1813055acb613!2zxJDhuqFpIGjhu41jIFTDtG4gxJDhu6ljIFRo4bqvbmc!5e0!3m2!1svi!2s!4v1701961581640!5m2!1svi!2s"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -43,6 +142,20 @@
         import renderFooter from '../Scripts/footer.js';
         import validateEmail from '../Scripts/validateEmail.js';
         renderFooter();
+
+        $(document).ready(() => {
+            $(".btn_send_email").click(() => {
+                const name = $("#name_box").val();
+                const email = $("#email_box").val();
+                const content = $("#content_box").val();
+
+                if (name && email && content && name.length > 0 && email.length > 0 && content.length > 0) {
+                    alert(`Send to: ${email} >>> Hello: ${name} || Content: ${content}`);
+                }
+                else
+                    alert("Vui lòng điền thông tin!")
+            })
+        })
     </script>
 
 </body>

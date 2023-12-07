@@ -1,0 +1,71 @@
+#name_box,
+#email_box,
+#content_box {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    border-radius: 0;
+}
+
+#name_box,
+#email_box {
+    height: 5rem;
+}
+
+#name_box:focus,
+#email_box:focus,
+#content_box:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: black;
+}
+
+.message_form label {
+    display: inline;
+}
+
+.btn_send_email {
+    color: #ffffff;
+    background: #F6780A;
+    border: transparent;
+    border-radius: 3rem;
+    outline: transparent;
+    padding: 1.2rem 4rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.infomation_title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.infomation_list a {
+    color: #212529;
+}
+
+.infomation_list a:hover {
+    color: #F6780A;
+}
+
+.infomation_list .infomation_inner {
+    display: flex;
+}
+
+.infomation_list .infomation_text {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.infomation_list .infomation_inner i {
+    margin-right: 10px;
+    color: inherit;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.social_media_link i {
+    font-size: 24px !important;
+}
