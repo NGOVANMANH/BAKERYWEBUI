@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakery Shop</title>
+    <title>Giới thiệu - BreadTalk</title>
     <!-- Add jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Add bootstrap -->
@@ -15,25 +15,33 @@
     <!-- Add style -->
     <link rel="stylesheet" href="globalstyle.css">
     <link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="introduction.css">
+    <link rel="stylesheet" href="headerbackground.css">
     <!-- Add icon library -->
     <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <a href="introduction.html">Giới thiệu</a>
-    <a href="recruitment.html">Tuyển dụng</a>
-    <a href="contact.html">Liên hệ</a>
-    <div id="header">
-        this is header
-    </div>
-
     <div id="main">
-        this is main
+        <div class="position-relative sub_header" tabindex="-1">
+            <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+            <div class="header_title container">
+                <div class="page_title">Liên hệ</div>
+                <div class="navigate_title d-flex align-items-center justify-content-center">
+                    <a href="index.html">Trang chủ&nbsp;</a> / Liên hệ
+                </div>
+            </div>
+        </div>
+        <div>
+            lien hẹ tao
+        </div>
     </div>
 
     <div id="footer"></div>
+
     <script type="module">
         import renderFooter from '../Scripts/footer.js';
+        import validateEmail from '../Scripts/validateEmail.js';
         renderFooter();
     </script>
 
