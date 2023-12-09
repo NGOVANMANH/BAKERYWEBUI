@@ -58,7 +58,7 @@
                 <a href="#cake-slices" class="list-item">Cake Slices</a>
                 <a href="#seasonal-specials" class="list-item">Seasonal Specials</a>
                 <a href="#drinks" class="list-item">Drinks</a>
-                <a href="#!" class="list-item">Pudding</a>
+                <a href="#pudding" class="list-item">Pudding</a>
                 <a href="#!" class="list-item">Sản phẩm nổi bật</a>
                 <a href="#cookies" class="list-item">Cookies</a>
                 <a href="#floss-specials" class="list-item">Floss Specials</a>
@@ -124,6 +124,15 @@
         <div id="drinks" class="container cate" style="width: 117rem;">
             <div class="row">
                 <div class="col-12 text-center title">Drinks</div>
+            </div>
+            <div class="row list">
+            </div>
+        </div>
+
+        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+        <div id="pudding" class="container cate" style="width: 117rem;">
+            <div class="row">
+                <div class="col-12 text-center title">Pudding</div>
             </div>
             <div class="row list">
             </div>
@@ -300,6 +309,25 @@
         listElement = document.querySelector('#drinks .list')
         outstanding = products.filter(p => {
             return p.category == 'Drinks'
+        })
+        outstandingPro = outstanding.map(o => {
+            return (
+                `
+                    <div class="col-3 product">
+                            <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
+                            <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
+                            <div class="price">${o.price}₫</div>
+                            <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
+                        </div>
+                    `)
+        })
+
+        html = outstandingPro.join("")
+        listElement.innerHTML = html
+
+        listElement = document.querySelector('#pudding .list')
+        outstanding = products.filter(p => {
+            return p.category == 'Pudding'
         })
         outstandingPro = outstanding.map(o => {
             return (
