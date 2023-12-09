@@ -1,0 +1,710 @@
+#footer {
+    background: url('../Images/FooterBackground/Group-1015-min.jpeg') no-repeat;
+    user-select: none;
+}
+
+.logo-image {
+    width: 209px;
+}
+
+.form-wrapper>input {
+    border-radius: 0;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    outline: transparent;
+    border: 1px solid white;
+    border-right: transparent;
+    background: transparent;
+}
+
+.form-wrapper>input:focus {
+    background: transparent;
+}
+
+.form-wrapper>input::placeholder {
+    color: white;
+}
+
+.form-wrapper>button {
+    outline: none;
+    border: none;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    border-left: 1px solid green;
+    background-color: #f6780a;
+    color: white;
+    border: 1px solid white;
+    border-left: transparent;
+}
+
+.form-wrapper>button:hover {
+    background-color: white;
+    color: #f6780a;
+}
+
+.col3-link {
+    color: white;
+}
+
+.col3-link:hover {
+    color: black;
+}
+
+.icons>a {
+    border: 1px solid white;
+    background: #f6780a;
+    border-radius: 100%;
+    width: 3.6rem;
+    height: 3.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons i {
+    color: white;
+    font-size: 2rem;
+}
+
+.icons>a:hover {
+    background: white;
+}
+
+.icons>a:hover i {
+    color: #f6780a;
+}
+
+.copyright {
+    background: #f6780a ;
+}
+
+
+
+/* ------------------------header------------------------------- */
+#header {
+    background-color: #fcf8f0;
+    height: 8.8rem;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    user-select: none;
+}
+
+#header .logo {
+    width: 21.6rem;
+    height: 5.2rem;
+}
+
+.menu {
+   
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.menu__sub-menu {
+    display: inline-block;
+    padding: 0 20px;
+   
+
+}
+
+.menu__sub-menu--link {
+    color: #000;
+    font-weight: 400;
+}
+
+.menu__sub-menu:hover .menu__sub-menu--link {
+    color: #f6780a;
+}
+
+.option {
+    width: 20.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.option__language {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #fff; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.icon {
+    
+    font-size: 24px;
+    
+}
+
+.carousel-control-prev,.carousel-control-next {
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,.carousel-control-next-icon {
+    background-color: #fff;
+    background-image: none;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c8c8c8;
+}
+
+.carousel-control-prev-icon i , .carousel-control-next i {
+    color: #000;
+    font-size: 24px;
+}
+
+/* -----------------center-------------- */
+.center {
+    width: 117rem;
+    margin: auto;
+    padding: 6rem 0;
+    display: flex;
+}
+
+.left {
+
+}
+
+.left .story {
+    font-family: 'Great Vibes', cursive;
+    text-align: left;
+    font-weight: 400;
+    font-size: 85px;
+    margin-bottom: 21px;
+    color: #f9a747;
+}
+
+.left .logo-name {
+    text-transform: uppercase;
+    color: #f9a747;
+    font-family: "Work Sans", sans-serif;
+    text-align: left;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 45px;
+    margin-bottom: 8px;
+}
+
+.left .content {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 28px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.right .story {
+    width: 37rem;
+    height: 55rem;
+    margin: 0 4rem;
+    margin-left: 15rem;
+}
+
+.category {
+    width: 100%;
+    height: 77.7rem;
+    background: url(https://breadtalkvietnam.com/wp-content/uploads/2023/06/z4431487419682_ca86e1aae215473c5d55a706fafa4c8f.jpg) no-repeat bottom;
+    background-size: cover;
+    position: relative;
+    padding: 12rem 0;
+}
+
+.category::before {
+    content: "";
+    width: 100%;
+    height: 77.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.category .title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    font-family: "Work Sans", sans-serif;
+    color: #fff;
+    z-index: 2;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.category .products {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    margin-top: 8.7rem;
+}
+
+.category .name {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 29px;
+    line-height: 34px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.category .view-all {
+    position: absolute;
+    bottom: 120px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 10px 30px;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 3px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    text-decoration: none;
+}
+
+.category .view-all:hover {
+    color: #fff;
+    background-color: #f6780a;
+}
+
+.outstanding {
+    padding: 10rem 0;
+    background-color: #fcf8f0;
+    position: relative;
+}
+
+.outstanding::after {
+    content: "";
+    width: 16.4rem;
+    height: 17rem;
+    background: url(https://breadtalkvietnam.com/wp-content/uploads/2023/05/pizza-deco1.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 2rem; 
+    right: 12%;
+}
+
+.outstanding::before {
+    content: "";
+    width: 18.7rem;
+    height: 9.8rem;
+    background: url(https://breadtalkvietnam.com/wp-content/uploads/2023/05/pizza-deco2.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 9rem; 
+    left: 8%;
+}
+
+.outstanding .title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #f9a747;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+}
+
+.outstanding .bg {
+    font-weight: 700;
+    font-size: 200px;
+    line-height: 115px;
+    letter-spacing: 0.1em;
+    color: #F7F1E5;
+    margin-top: 6rem;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+.outstanding .list {
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    z-index: 2;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.outstanding .product {
+    width: 34.5rem;
+    height: 49.5rem;
+}
+
+.outstanding .product .pimg {
+    width: 100%;
+    height: 34.5rem;
+    overflow: hidden;
+}
+
+.outstanding .product .image {
+    width: 100%;
+    height: 100%;
+    transition: scale 0.5s, opacity 0.5s ;
+}
+
+.outstanding .product .image:hover {
+    scale: 1.1;
+    opacity: 0.8;
+}
+
+.outstanding .product .name {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: left;font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    text-transform: uppercase;
+    text-align: left;
+    color: #000;
+    transition: color 0.25s ease-out;
+}
+
+.outstanding .product .name:hover {
+    color: #f9a747;
+}
+
+.outstanding .product .price {
+    font-family: "Barlow Condensed", sans-serif;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 21px;
+    color: #f9a747;
+    margin-top: 8px;
+}
+
+.outstanding .product .cart {
+    overflow: hidden ;
+    cursor: pointer;
+    border: 1px solid #000 ;
+    display: block ;
+    font-size: 18px ;
+    line-height: 22px ;
+    font-weight: 500 ;
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: normal;
+    opacity: 1 ;
+    vertical-align: middle;
+    margin: 0 0 1rem 0;
+    padding: 0.85em 1em;
+    border-radius: 0;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    text-align: center;
+    margin-top: 2rem;
+    background-color: transparent;
+    color: #000;
+}
+
+.outstanding .product .cart:hover {
+    color: #fff;
+    background-color: #f9a747;
+    border-color: #f9a747;
+}
+
+.outstanding .view-all {
+    bottom: 120px;
+    color: #000;
+    border: 1px solid #000;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    padding: 10px 30px;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+    border-radius: 3px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.25s ease-out, color 0.25s ease-out,border-color 0.25s ease-out;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 6rem;
+}
+
+.outstanding .view-all:hover {
+    color: #fff;
+    background-color: #f9a747;
+    border-color: #f9a747;
+
+}
+
+/* ----------------------feedback-------------------- */
+.feedback {
+    box-sizing: border-box;
+    padding: 0 18rem;
+    height: 48.5rem;
+    display: flex;
+    justify-content: space-between;
+    background: url('https://breadtalkvietnam.com/wp-content/uploads/2023/05/Group-1021-min.jpeg')no-repeat center;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+.feedback::before {
+    background: linear-gradient(180deg, #FCF8F0 0%, rgba(252, 248, 240, 0) 100%);
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.feedback .left {
+    width: 56.2rem;
+    height: 48.3rem;
+}
+
+.feedback .cheef {
+    width: 100%;
+    height: 100%;
+}
+
+.feedback .right {
+    width: 56.2rem;
+    height: 48.3rem;
+}
+
+.feedback .title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    font-family: "Work Sans", sans-serif;
+    text-transform: uppercase;
+    color: #f9a747;
+    margin-bottom: 30px;
+}
+
+.feedback .star {
+    width: 200px;
+    transform: translateX(-30px);
+}
+
+.feedback .des {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.feedback .customer {
+    display: flex;
+    align-items: center;
+}
+
+.feedback .customer img {
+    width: 10rem;
+    height: 10rem;
+    border: 1px dashed #000;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.feedback .customer .name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    font-family: "Work Sans", sans-serif;
+    margin-left: 1.5rem;
+}
+
+.cook {
+    padding: 6rem 18rem;
+    user-select: none;
+    
+}
+
+.cook .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cook .title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #f9a747;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    
+}
+
+.cook .des {
+    margin: 0 auto 30px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: center;
+    color: #454545;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", Arial, sans-serif;
+    margin-top: 2rem;
+}
+
+.cook .product::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid #D9D9D9;
+    top: 9px;
+    left: 9px;
+    z-index: -1;
+}
+
+.cook .product {
+    width: 36rem;
+    height: 43rem;
+    background: #ffffff;
+    border: 1px solid #D9D9D9;
+    position: relative;
+}
+
+.cook .product .image {
+    width: 100%;
+    height: 27rem;
+}
+
+.cook .product .namee {
+    padding: 25px 16px 0 25px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Barlow Condensed", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.cook .product .dess {
+    box-sizing: content-box;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 21px;
+    color: #5C5C5C;
+    width: 31.9rem;
+    height: 6.3rem;
+    text-align: left;
+    padding: 8px 16px 45px 25px;
+    
+}
+
+.cook .product .dess p {
+    width: 31.9rem;
+    height: 6.3rem;
+    overflow: hidden;
+}
+
+.goTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 24px;
+    border: 1px solid #8a8a8a;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 999;
+}
+
+.fb,.phone{
+    position: fixed;
+    bottom: 7rem;
+    right: 1rem;
+    font-size: 32px;
+    border-radius: 50%;
+    color: #1182fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 999;
+    animation: iconSkew 1s infinite ease-out;
+}
+
+@keyframes iconSkew {
+    0% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    50% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+}
+
+.phone {
+    color: red;
+    bottom: 13rem;
+}
+

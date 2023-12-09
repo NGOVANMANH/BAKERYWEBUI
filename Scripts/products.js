@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: "MUSHROOM CHEESE SAUSAGE",
@@ -17,7 +17,7 @@ const products = [
     },
     {
         id: 3,
-        name: "BROWN SUGAR INJEOLMI KORISSANT",
+        name: "BROWN SUGAR INJEOLMI",
         price: 29000,
         category: "Buns",
         description: "Bánh Croissant nhân kem bột đậu nành",
@@ -624,34 +624,3 @@ const products = [
         image: "../Images/Product/dsc03428_optimized.png"
     },
 ]
-
-
-const root = document.querySelector("#root");
-
-products.forEach((item, index) => {
-
-    const img = document.createElement("img");
-    img.src = item.image;
-    img.alt = `slide-${index}`;
-
-    const id = document.createElement("span");
-    id.innerText = `${item.id}`;
-
-    const name = document.createElement("span");
-    name.innerText = `${item.name}`;
-
-    const price = document.createElement("span");
-    price.innerText = `${item.price}`;
-
-    const description = document.createElement("span");
-    description.innerText = `${item.description}`;
-
-    const div = document.createElement("div");
-    div.appendChild(img);
-    div.appendChild(id);
-    div.appendChild(name);
-    div.appendChild(price);
-    div.appendChild(description);
-
-    root.appendChild(div);
-});
