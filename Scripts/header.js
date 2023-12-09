@@ -1,5 +1,5 @@
-const header = document.querySelector("#header")
 
+const header = document.querySelector("#header")
 const html = `
 <img
                 src="../Images/Logo/PT-Talkindo-Selaksa-Anugrah-2.png"
@@ -31,9 +31,23 @@ const html = `
             <div class="option">
                 <div class="option__language">VI | EN</div>
                 <a class="div-icon" href="Cart.html"><i class="fa-solid fa-cart-shopping icon"></i></a>
-                <div class="div-icon"><i class="fa-solid fa-magnifying-glass icon"></i></i></div>
+                <div class="div-icon"><i class="fa-solid fa-magnifying-glass icon" onclick="handleShow()" ></i></div>
                 
                 
             </div>
+            <div class="searchp" onclick="handleClose()">
+            <div class="searchPosition">
+                <div class="input">
+                    <input type="text" id="_input" onclick="event.stopPropagation()" onChange="handleChange(event)"/>
+                    <i
+                        class="fa-solid fa-magnifying-glass"
+                        onclick="handleSearch()"
+                    ></i>
+                </div>
+            </div>
+            <i class="fa-solid fa-xmark xmark" onclick="handleClose()"></i>
+        </div>
 `
 header.innerHTML = html
+
+

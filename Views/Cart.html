@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Bakery Shop</title>
+    <title>Giỏ hàng - BreadTalk</title>
     <!-- Add jquery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Add bootstrap -->
@@ -28,7 +28,9 @@
     <!-- Add global style -->
     <link rel="stylesheet" href="globalstyle.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="footerstyle.css">
     <link rel="stylesheet" href="Cart.css" />
+    <link rel="stylesheet" href="headerbackground.css" />
 
 
     <!-- Add icon library -->
@@ -38,14 +40,15 @@
 <body>
 
     <div id="header"></div>
+    <script src="../Scripts/search.js"></script>
+
     <div id="main">
-        <div class="header">
-            <div class="image">
-                <div class="container ">
-                    <div class="row justify-content-center">
-                        <div class="title col-12 text-center">Cart</div>
-                        <p class="col-12 text-center">Trang chủ / Sản phẩm</p>
-                    </div>
+        <div class="position-relative sub_header" tabindex="-1">
+            <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+            <div class="header_title container">
+                <div class="page_title">Giỏ hàng</div>
+                <div class="navigate_title d-flex align-items-center justify-content-center">
+                    <a href="index.html">Trang chủ</a>&nbsp; / Giỏ hàng
                 </div>
             </div>
         </div>
@@ -81,9 +84,15 @@
 
     </div>
     <div id="footer"></div>
+    <script src="../Scripts/header.js" type="module"></script>
+    <script type="module">
+        import renderFooter from "../Scripts/footer.js";
+        import validateEmail from "../Scripts/validateEmail.js";
+        renderFooter();
+    </script>
 
     <script src="../Scripts/header.js" type="module"></script>
-    <script src="../Scripts/footer.js" type="module"></script>
+
     <script>
         let shopCart = JSON.parse(localStorage.getItem('cart'));
         let elementToRemove = document.querySelector('.remove');
@@ -127,7 +136,7 @@
                 return (
                     `
                         <tr>
-                        <th scope="row" class="stt">${index + 1}</th>
+                        <th class="stt">${index + 1}</th>
                         <td class="product">
                             <i class="fa-solid fa-xmark delete" onclick="handleDelete(${pro.id})"></i>
                             <img src=${pro.image} alt="" class="image">

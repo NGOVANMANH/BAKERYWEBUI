@@ -1,423 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;300;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Sản phẩm - BreadTalk</title>
+        <!-- Add jquery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- Add bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Add global style -->
+        <link rel="stylesheet" href="globalstyle.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="footerstyle.css" />
+        <link rel="stylesheet" href="Products.css" />
+        <link rel="stylesheet" href="headerbackground.css" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;300;500;700&display=swap" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <title>Bakery Shop</title>
-    <!-- Add jquery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Add bootstrap -->
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Add global style -->
-    <link rel="stylesheet" href="globalstyle.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="Products.css" />
+        <!-- Add icon library -->
+        <script
+            src="https://kit.fontawesome.com/2d9a5cdc3d.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
 
-    <!-- Add icon library -->
-    <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-    <div id="header"></div>
-    <div id="main">
-        <div class="header">
-            <div class="image">
-                <div class="container ">
-                    <div class="row justify-content-center">
-                        <div class="title col-12 text-center">Product</div>
-                        <p class="col-12 text-center">Trang chủ / Sản phẩm</p>
+    <body>
+        <div id="header"></div>
+        <script src="../Scripts/search.js"></script>
+        
+        <div id="main">
+            <div class="position-relative sub_header" tabindex="-1">
+                <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+                <div class="header_title container">
+                    <div class="page_title">Sản phẩm</div>
+                    <div class="navigate_title d-flex align-items-center justify-content-center">
+                        <a href="index.html">Trang chủ</a>&nbsp; / Sản phẩm
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="category1">
-            <div class="title">danh mục sản phẩm</div>
-            <div class="list">
-                <a href="#buns" class="list-item">Buns</a>
-                <a href="#toasts" class="list-item">Toasts</a>
-                <a href="#sandwiches" class="list-item">Sandwiches</a>
-                <a href="#dry-cakes" class="list-item">Dry Cakes</a>
-                <a href="#cakes" class="list-item">Cakes</a>
-                <a href="#cake-slices" class="list-item">Cake Slices</a>
-                <a href="#seasonal-specials" class="list-item">Seasonal Specials</a>
-                <a href="#drinks" class="list-item">Drinks</a>
-                <a href="#pudding" class="list-item">Pudding</a>
-                <a href="#!" class="list-item">Sản phẩm nổi bật</a>
-                <a href="#cookies" class="list-item">Cookies</a>
-                <a href="#floss-specials" class="list-item">Floss Specials</a>
+            <div class="category1">
+                <div class="title">danh mục sản phẩm</div>
+                <div class="list">
+                    <a href="#buns" class="list-item">Buns</a>
+                    <a href="#toasts" class="list-item">Toasts</a>
+                    <a href="#sandwiches" class="list-item">Sandwiches</a>
+                    <a href="#dry-cakes" class="list-item">Dry Cakes</a>
+                    <a href="#cakes" class="list-item">Cakes</a>
+                    <a href="#cake-slices" class="list-item">Cake Slices</a>
+                    <a href="#seasonal-specials" class="list-item"
+                        >Seasonal Specials</a
+                    >
+                    <a href="#drinks" class="list-item">Drinks</a>
+                    <a href="#pudding" class="list-item">Pudding</a>
+                    <a href="#!" class="list-item">Sản phẩm nổi bật</a>
+                    <a href="#cookies" class="list-item">Cookies</a>
+                    <a href="#floss-specials" class="list-item"
+                        >Floss Specials</a
+                    >
+                </div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="buns" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">BUNS</div>
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="buns" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">BUNS</div>
+                </div>
+                <div class="row list"></div>
             </div>
-            <div class="row list">
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="toasts" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">toasts</div>
+                </div>
+                <div class="row list"></div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="toasts" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">toasts</div>
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="sandwiches" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Sandwiches</div>
+                </div>
+                <div class="row list"></div>
             </div>
-            <div class="row list">
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="dry-cakes" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Dry Cakes</div>
+                </div>
+                <div class="row list"></div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="sandwiches" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Sandwiches</div>
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="cakes" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Cakes</div>
+                </div>
+                <div class="row list"></div>
             </div>
-            <div class="row list">
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="cake-slices" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Cake Slices</div>
+                </div>
+                <div class="row list"></div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="dry-cakes" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Dry Cakes</div>
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div
+                id="seasonal-specials"
+                class="container cate"
+                style="width: 117rem"
+            >
+                <div class="row">
+                    <div class="col-12 text-center title">
+                        Seasonal Specials
+                    </div>
+                </div>
+                <div class="row list"></div>
             </div>
-            <div class="row list">
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="drinks" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Drinks</div>
+                </div>
+                <div class="row list"></div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="cakes" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Cakes</div>
+
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="pudding" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Pudding</div>
+                </div>
+                <div class="row list"></div>
             </div>
-            <div class="row list">
+
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div id="cookies" class="container cate" style="width: 117rem">
+                <div class="row">
+                    <div class="col-12 text-center title">Cookies</div>
+                </div>
+                <div class="row list"></div>
             </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="cake-slices" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Cake Slices</div>
-            </div>
-            <div class="row list">
-            </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="seasonal-specials" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Seasonal Specials</div>
-            </div>
-            <div class="row list">
-            </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="drinks" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Drinks</div>
-            </div>
-            <div class="row list">
+            <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
+            <div
+                id="floss-specials"
+                class="container cate"
+                style="width: 117rem"
+            >
+                <div class="row">
+                    <div class="col-12 text-center title">Floss Specials</div>
+                </div>
+                <div class="row list"></div>
             </div>
         </div>
 
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="pudding" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Pudding</div>
-            </div>
-            <div class="row list">
-            </div>
-        </div>
+        <div class="goTop"><i class="fa-solid fa-arrow-up"></i></div>
 
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="cookies" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Cookies</div>
-            </div>
-            <div class="row list">
-            </div>
-        </div>
-        <div class="sub-title">WAKE UP YOUR TASTE BUDS</div>
-        <div id="floss-specials" class="container cate" style="width: 117rem;">
-            <div class="row">
-                <div class="col-12 text-center title">Floss Specials</div>
-            </div>
-            <div class="row list">
-            </div>
-        </div>
-    </div>
+        <div id="footer"></div>
+        <script src="../Scripts/header.js" type="module"></script>
+        <script type="module">
+            import renderFooter from "../Scripts/footer.js";
+            import validateEmail from "../Scripts/validateEmail.js";
+            renderFooter();
+        </script>
 
-    <div class="goTop"><i class="fa-solid fa-arrow-up"></i></div>
+        <script src="../Scripts/header.js" type="module"></script>
 
-    <div id="footer"></div>
-
-
-    <script src="../Scripts/header.js" type="module"></script>
-    <script src="../Scripts/footer.js" type="module"></script>
-    <script>
-
-        document.querySelector(".goTop").addEventListener("click", function () {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+        <script>
+            document
+                .querySelector(".goTop")
+                .addEventListener("click", function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                    });
+                });
+        </script>
+        <script type="module">
+            import { products } from "../Scripts/products.js";
+            let listElement = document.querySelector("#buns .list");
+            let outstanding = products.filter((p) => {
+                return p.category == "Buns";
             });
-        });
-    </script>
-    <script type="module">
-        import { products } from "../Scripts/products.js";
-        let listElement = document.querySelector('#buns .list')
-        let outstanding = products.filter(p => {
-            return p.category == 'Buns'
-        })
-        let outstandingPro = outstanding.map(o => {
-            return (
-                `
+            let outstandingPro = outstanding.map((o) => {
+                return `
                 <div class="col-3 product">
                         <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                         <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                        <div class="price">${o.price}₫</div>
+                        <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                         <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                     </div>
-                `)
-        })
-        let html = outstandingPro.join("")
-        listElement.innerHTML = html
+                `;
+            });
+            let html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#toasts .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Toasts'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#toasts .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Toasts";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                 <div class="col-3 product">
                         <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                         <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                        <div class="price">${o.price}₫</div>
+                        <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                         <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                     </div>
-                `)
-        })
+                `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#sandwiches .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Sandwiches'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#sandwiches .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Sandwiches";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#dry-cakes .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Dry Cakes'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#dry-cakes .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Dry Cakes";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#cakes .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Cakes'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#cakes .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Cakes";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#cake-slices .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Cake Slices'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#cake-slices .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Cake Slices";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#seasonal-specials .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Seasonal Specials'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#seasonal-specials .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Seasonal Specials";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#drinks .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Drinks'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#drinks .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Drinks";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#pudding .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Pudding'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#pudding .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Pudding";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#cookies .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Cookies'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#cookies .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Cookies";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
 
-        listElement = document.querySelector('#floss-specials .list')
-        outstanding = products.filter(p => {
-            return p.category == 'Floss Specials'
-        })
-        outstandingPro = outstanding.map(o => {
-            return (
-                `
+            listElement = document.querySelector("#floss-specials .list");
+            outstanding = products.filter((p) => {
+                return p.category == "Floss Specials";
+            });
+            outstandingPro = outstanding.map((o) => {
+                return `
                     <div class="col-3 product">
                             <a href="ProductDetail.html?id=${o.id}" class="pimg"><img src=${o.image} class="image" alt=""></a>
                             <a href="ProductDetail.html?id=${o.id}" class="name">${o.name}</a>
-                            <div class="price">${o.price}₫</div>
+                            <div class="price">${o.price.toLocaleString('en-US')}₫</div>
                             <a href="#!" class="cart" onclick="handleCart(${o.id})">Thêm vào giỏ hàng</a>
                         </div>
-                    `)
-        })
+                    `;
+            });
 
-        html = outstandingPro.join("")
-        listElement.innerHTML = html
-
-
-    </script>
-    <script>
-        let cart = JSON.parse(localStorage.getItem('cart'));
-        if (!cart) {
-            cart = []
-        }
-        const handleCart = (id) => {
-            if (cart.length == 0) {
-                let cartItem = {
-                    id: id,
-                    value: 1
-                }
-                cart = [...cart, cartItem]
+            html = outstandingPro.join("");
+            listElement.innerHTML = html;
+        </script>
+        <script>
+            let cart = JSON.parse(localStorage.getItem("cart"));
+            if (!cart) {
+                cart = [];
             }
-            else {
-                let count = 0
-                for (let i = 0; i < cart.length; i++) {
-                    if (cart[i].id == id) {
-                        count++
-                        cart[i].value = cart[i].value + 1
-                    }
-                }
-                if (count == 0) {
+            const handleCart = (id) => {
+                if (cart.length == 0) {
                     let cartItem = {
                         id: id,
-                        value: 1
+                        value: 1,
+                    };
+                    cart = [...cart, cartItem];
+                } else {
+                    let count = 0;
+                    for (let i = 0; i < cart.length; i++) {
+                        if (cart[i].id == id) {
+                            count++;
+                            cart[i].value = cart[i].value + 1;
+                        }
                     }
-                    cart = [...cart, cartItem]
+                    if (count == 0) {
+                        let cartItem = {
+                            id: id,
+                            value: 1,
+                        };
+                        cart = [...cart, cartItem];
+                    }
                 }
-
-            }
-            localStorage.setItem('cart', JSON.stringify(cart))
-            alert("Thêm sản phẩm vào giỏ hàng thành công")
-        }
-    </script>
-</body>
-
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert("Thêm sản phẩm vào giỏ hàng thành công");
+            };
+        </script>
+    </body>
 </html>

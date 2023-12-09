@@ -74,32 +74,36 @@
 .content .price {
     font-weight: 500;
     font-size: 15px;
-    padding-top: 30px;
+    vertical-align: middle;
 }
 
 .content .sub-price {
     font-weight: 700;
     font-size: 15px;
-    padding-top: 30px;
+    vertical-align: middle;
+}
+
+.content .stt {
+    vertical-align: middle;
 }
 
 .content .quatity {
     font-weight: 500;
     font-size: 15px;
-    padding-top: 30px;
+    vertical-align: middle;
 }
 
 .action {
     margin-bottom: 6rem;
-    padding-top: 30px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 
 .remove {
-
     font-size: 26px;
-    margin-top: 30px;
-    padding: 20px;
-    margin-left: 5rem;
+    margin-left: 8.3rem;
     color: red;
 }
 
@@ -108,7 +112,7 @@
     font-weight: 700;
     font-size: 20px;
     margin-right: 50px;
-
+    display: inline-block;
 }
 
 .delete {
