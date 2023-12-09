@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống cửa hàng - BreadTalk</title>
+    <!-- Add jquery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Add bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add style -->
+    <link rel="stylesheet" href="globalstyle.css">
+    <link rel="stylesheet" href="footerstyle.css">
+    <link rel="stylesheet" href="headerbackground.css">
+    <link rel="stylesheet" href="branch.css">
+    <link rel="stylesheet" href="carousel.css">
+    <!-- Add icon library -->
+    <script src="https://kit.fontawesome.com/2d9a5cdc3d.js" crossorigin="anonymous"></script>
+
+    <style>
+        /*the container must be positioned relative:*/
+        .custom-select {
+            position: relative;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        .custom-select select {
+            display: none;
+            /*hide original SELECT element:*/
+        }
+
+        .select-selected {
+            color: #fff !important;
+            background-color: #F9A747;
+        }
+
+        /*style the arrow inside the select element:*/
+        .select-selected:after {
+            position: absolute;
+            content: "";
+            top: 18px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-color: #fff transparent transparent transparent;
+        }
+
+        /*point the arrow upwards when the select box is open (active):*/
+        .select-selected.select-arrow-active:after {
+            border-color: transparent transparent #fff transparent;
+            top: 7px;
+        }
+
+        /*style the items (options), including the selected item:*/
+        .select-items div,
+        .select-selected {
+            color: black;
+            padding: 8px 16px;
+            border: 1px solid transparent;
+            /* border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent; */
+            border: transparent;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /*style items (options):*/
+        .select-items {
+            position: absolute;
+            background-color: #ffffff;
+            border: 1px solid rgb(190, 190, 190);
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        /*hide the items when the select box is closed:*/
+        .select-hide {
+            display: none;
+        }
+
+        .select-items div:hover,
+        .same-as-selected {
+            background: #F9A747;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="position-relative sub_header" tabindex="-1">
+            <img class="position-absolute header_background" src="../Images/header.jpeg" alt="subheader">
+            <div class="header_title container">
+                <div class="page_title">Hệ thống cửa hàng</div>
+                <div class="navigate_title d-flex align-items-center justify-content-center">
+                    <a href="index.html">Trang chủ</a>&nbsp; / Hệ thống cửa hàng
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="branch_title">DANH SÁCH HỆ THỐNG ĐIỂM MUA HÀNG VÀ ĐẢM BẢO CHẤT LƯỢNG BREADTALK VIỆT NAM</div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 p-3">
+                    <div class="custom-select w-100">
+                        <select id="select_TinhThanh">
+                            <option>Hồ Chí Minh</option>
+                            <option>Hồ Chí Minh</option>
+                            <option>Hà Nội</option>
+                            <option>Hải Phòng</option>
+                            <option>Nha Trang</option>
+                            <option>Phú Quốc</option>
+                            <option>Đà Nẵng</option>
+                        </select>
+                    </div>
+
+                    <ul class="location-list">
+                        <li data-id="1345"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15677.735088210373!2d106.69169032294508!3d10.778051627593825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4743648f3d%3A0x16ce95918cb14834!2sSaigon%20Centre!5e0!3m2!1svi!2s!4v1687580155468!5m2!1svi!2s">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Saigon Centre</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>B2-14, Tầng B2, Saigon Centre, 65 Lê
+                                    Lợi, Phường Bến Nghé, Quận 1, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3821 7219</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.sgcentre@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>08h30 - 21h30 (Thứ hai - Thứ sáu), 08h30 - 22h00 (Thứ
+                                    bảy, Chủ nhật)</span>
+                            </div>
+                        </li>
+                        <li data-id="607"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7838.868263647351!2d106.70172700000002!3d10.778024!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f47daa50309%3A0x310c6d5537b05bae!2sBreadTalk!5e0!3m2!1svi!2sus!4v1685066573202!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Vincom Đồng Khởi</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>B3-15A, Tầng B3, Vincom, 70-72 Lê
+                                    Thánh Tôn, Phường Bến Nghé, Quận 1, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3993 9025</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.vincom@breadtalkvietnam.com</span> <span><i
+                                        class="fas fa-clock"></i>08h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="609"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6148610029995!2d106.67996887346611!3d10.764136559423497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f194dae00e5%3A0x4b90c5d0bd96fe63!2sNOWZONE%20Fashion%20Mall!5e0!3m2!1svi!2s!4v1687577154132!5m2!1svi!2s">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Nowzone</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>Tầng trệt, TTTM Nowzone, 235 Nguyễn
+                                    Văn Cừ, Phường Nguyễn Cư Trinh, Quận 1, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 35214205</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.nowzone@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>07h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="606"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7838.255980949002!2d106.746573!3d10.801508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175266a12e6ebf7%3A0x20ab1843aac1090e!2sBreadtalk%20Cantavil!5e0!3m2!1svi!2sus!4v1685066500778!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Cantavil</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>Tầng trệt, Tòa nhà Cantavil, số 1 Song
+                                    Hành (Xa lộ Hà Nội), P. An Phú, Tp. Thủ Đức, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3740 4380</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.cantavil@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="605"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15678.919163343991!2d106.669335!3d10.755296000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752efb82ccb6a1%3A0xe4df92d3fb640f21!2zQnJlYWRUYWxrIE5ndXnhu4VuIFRyaSBQaMawxqFuZw!5e0!3m2!1svi!2sus!4v1685066444909!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Nguyễn Tri Phương</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>143-145 Nguyễn Tri Phương, Phường 8,
+                                    Quận 5, TP. HCM</address> <span><i class="fa-solid fa-phone"></i>028 3855
+                                    2430</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.nguyentriphuong@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="603"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.055121598304!2d106.70082257452478!3d10.730232089415752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f80c3947d97%3A0x11f8c4c9b629e2cf!2sSC%20VivoCity!5e0!3m2!1svi!2s!4v1685083309140!5m2!1svi!2s">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk SC Vivo City</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>Gian 3-12, Tầng 3, SC Vivo City, 1058
+                                    Nguyễn Văn Linh, Phường Tân Phong, Quận 7, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3771 0520</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.scvivocity@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>10h00 – 22h00 (Thứ hai – Thứ sáu), 09h00 – 22h00 (Thứ
+                                    bảy, Chủ nhật)</span>
+                            </div>
+                        </li>
+                        <li data-id="602"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d980.0057673555615!2d106.70681!3d10.732704!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbd401e7025%3A0x4f596ed345e1ccce!2sBreadTalk%20H%C6%B0ng%20Gia!5e0!3m2!1svi!2sus!4v1685066277985!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Hưng Gia</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>Lô R2-24 Khu Hưng Gia 4, 95 Phan Khiêm
+                                    Ích, Phường Tân Phong, Quận 7, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 54108152</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.hunggia@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 21h30</span>
+                            </div>
+                        </li>
+                        <li data-id="601"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.06693815073!2d106.669664!3d10.770393!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edde7fe39a9%3A0x70bac4d3ea6daac6!2zQnJlYWRUYWxrIFPGsCBW4bqhbiBI4bqhbmg!5e0!3m2!1svi!2sus!4v1685066225773!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Vạn Hạnh Mall</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>F17-F18, Tầng B1, Vạn Hạnh Mall, số 11
+                                    Sư Vạn Hạnh, Phường 12, Quận 10, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3636 6685</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.vanhanh@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>08h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="600"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31359.093986886317!2d106.612386!3d10.743211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dcec4321281%3A0xaedede3c5fc969cd!2sBreadTalk!5e0!3m2!1svi!2sus!4v1685066175863!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Aeon Mall Bình Tân</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>G2, Tầng trệt, Aeon Bình Tân, số 1
+                                    đường số 17A, KP 11, Phường Bình Trị Đông B, Quận Bình Tân, TP. HCM</address>
+                                <span><i class="fa-solid fa-phone"></i>028 3620 6061</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.ambinhtan@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>08h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="599"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.52522897568!2d106.67221!3d10.82947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752974f671fb5f%3A0x6e865cdc62d4372e!2sBreadTalk%20Quang%20Trung!5e0!3m2!1svi!2sus!4v1685066100338!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Vincom Quang Trung</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>L1-11, Tầng trệt, Vincom Quang Trung,
+                                    190 Quang Trung, Phường 10, Quận Gò Vấp, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3894 6595</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.vcquangtrung@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>08h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="598"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.52522897568!2d106.67221!3d10.82947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752974f671fb5f%3A0x6e865cdc62d4372e!2sBreadTalk%20Quang%20Trung!5e0!3m2!1svi!2sus!4v1685066043640!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Phan Văn Trị</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>366A22 Phan Văn Trị, Phường 5, Quận Gò
+                                    Vấp, TP. HCM</address> <span><i class="fa-solid fa-phone"></i>028 62734155</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.phanvantri@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 22h30</span>
+                            </div>
+                        </li>
+                        <li data-id="597"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.180789681503!2d106.6876653505152!3d10.797461392269444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ce49533a65%3A0x96e838671f96c250!2sBreadtalk!5e0!3m2!1svi!2s!4v1599468656407!5m2!1svi!2s">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Sun Avenue</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>SAV.1-00.05, Tháp 1, The Sun Avenue,
+                                    28 Đại lộ Mai Chí Thọ, Phường An Phú, TP. Thủ Đức, TP. Hồ Chí Minh</address>
+                                <span><i class="fa-solid fa-phone"></i>028 3535 4136</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.sunavenue@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="596"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489.943386633892!2d106.651797!3d10.769346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e95452acd53%3A0x180f92605e2f33bc!2zMzYgw4J1IEPGoSwgUGjGsOG7nW5nIDksIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1685065740179!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Âu Cơ</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>36-36A Âu Cơ, Phường 9, Quận Tân Bình,
+                                    Tp. HCM</address> <span><i class="fa-solid fa-phone"></i>028 35358936</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.auco@breadtalkvietnam.com</span> <span><i
+                                        class="fas fa-clock"></i>06h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="595"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1289319282846!2d106.61441282346661!3d10.801435858735111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9535b60699%3A0x4737f3be8bd41d5b!2zw4ZPTiBNQUxMIFTDom4gUGjDuiBDZWxhZG9u!5e0!3m2!1svi!2s!4v1688097907594!5m2!1svi!2s">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Aeon Mall Tân Phú</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>G27, Tầng trệt, AeonMall Tân Phú, 30
+                                    Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3847 2085</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.amtanphu@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>08h00 - 22h00</span>
+                            </div>
+                        </li>
+                        <li data-id="592"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7824679709665!2d106.71898377346704!3d10.827952458244432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291a71519df7%3A0xcbeec0265c71c79f!2zVHJ1bmcgVMOibSBUaMawxqFuZyBN4bqhaSBHaWdhbWFsbC9TZW5zZSBDaXR5!5e0!3m2!1svi!2sus!4v1688091756180!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Gigamall</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>L2-02, Tầng 2, Gigamall, 240-242 Phạm
+                                    Văn Đồng, Phường Hiệp Bình Chánh, Tp. Thủ Đức, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 3636 3267</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.gigamall@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>09h30 – 22h00 (Thứ hai – Thứ sáu), 09h00 – 22h00 (Thứ
+                                    bảy, Chủ nhật)</span>
+                            </div>
+                        </li>
+                        <li data-id="590"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.569395693038!2d106.721326!3d10.827782!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752932c476c6bf%3A0x7ebf5614a357eab0!2sBreadTalk%20Gigamall!5e0!3m2!1svi!2sus!4v1685065389978!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Vinhomes Grand Park</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>01S13 Tòa S3.01, Vinhomes Grand Park,
+                                    Phường Long Thạnh Mỹ, TP. Thủ Đức, TP. HCM</address> <span><i
+                                        class="fa-solid fa-phone"></i>028 36201623</span>
+                                <span><i class="fa-solid fa-envelope"></i>ch.vhgrandpark@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h00 - 21h30</span>
+                            </div>
+                        </li>
+                        <li data-id="588" style="margin: 0;"
+                            data-embed="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31361.302881900214!2d106.70395!3d10.721919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6fd2eadc87%3A0x2e1394afb5d90acd!2sSunrise%20Riverside%20Block%20B!5e0!3m2!1svi!2sus!4v1685065238885!5m2!1svi!2sus">
+                            <div class="hb_address_location">
+                                <h6>BreadTalk Sunrise Riverside</h6>
+                                <address> <i class="fa-solid fa-location-dot"></i>B-01.11 và B-01.12, Block B, Khu căn
+                                    hộ Sunrise Riverside, Ấp 5, Xã Phước Kiển, Huyện Nhà Bè, Tp. Hồ Chí Minh</address>
+                                <span><i class="fa-solid fa-phone"></i>028 36201607</span>
+                                <span><i
+                                        class="fa-solid fa-envelope"></i>ch.sunriseriverside@breadtalkvietnam.com</span>
+                                <span><i class="fas fa-clock"></i>06h30 - 22h00</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col p-3">
+                    <iframe class="w-100"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.365202844998!2d106.68986009678956!3d10.859802899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529c17978287d%3A0xec48f5a17b7d5741!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOZ3V54buFbiBU4bqldCBUaMOgbmggLSBDxqEgc-G7nyBxdeG6rW4gMTI!5e0!3m2!1svi!2s!4v1702100079133!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="branch_title">Danh sách chi nhánh</div>
+        </div>
+
+        <div class="container mb-5">
+            <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    1 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Aeon Mall Bình Tân</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    G2, Tầng trệt, Aeon Bình Tân, số 1 đường số 17A, KP 11, Phường Bình Trị Đông B, Quận
+                                    Bình Tân, TP. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31359.093986886317!2d106.612386!3d10.743211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752dcec4321281%3A0xaedede3c5fc969cd!2sBreadTalk!5e0!3m2!1svi!2sus!4v1685066175863!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 3620 6061">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 3620 6061 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.ambinhtan@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.ambinhtan@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    08h00 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    2 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Vincom Quang Trung</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    L1-11, Tầng trệt, Vincom Quang Trung, 190 Quang Trung, Phường 10, Quận Gò Vấp, TP.
+                                    HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.52522897568!2d106.67221!3d10.82947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752974f671fb5f%3A0x6e865cdc62d4372e!2sBreadTalk%20Quang%20Trung!5e0!3m2!1svi!2sus!4v1685066100338!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 3894 6595">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 3894 6595 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.vcquangtrung@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.vcquangtrung@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    08h00 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    3 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Phan Văn Trị</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    366A22 Phan Văn Trị, Phường 5, Quận Gò Vấp, TP. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.52522897568!2d106.67221!3d10.82947!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752974f671fb5f%3A0x6e865cdc62d4372e!2sBreadTalk%20Quang%20Trung!5e0!3m2!1svi!2sus!4v1685066043640!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 62734155">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 62734155 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.phanvantri@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.phanvantri@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    06h00 - 22h30
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    4 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Sun Avenue</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    SAV.1-00.05, Tháp 1, The Sun Avenue, 28 Đại lộ Mai Chí Thọ, Phường An Phú, TP. Thủ
+                                    Đức, TP. Hồ Chí Minh
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.180789681503!2d106.6876653505152!3d10.797461392269444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ce49533a65%3A0x96e838671f96c250!2sBreadtalk!5e0!3m2!1svi!2s!4v1599468656407!5m2!1svi!2s"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 3535 4136">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 3535 4136 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.sunavenue@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.sunavenue@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    06h00 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    5 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Âu Cơ</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    36-36A Âu Cơ, Phường 9, Quận Tân Bình, Tp. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d489.943386633892!2d106.651797!3d10.769346!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752e95452acd53%3A0x180f92605e2f33bc!2zMzYgw4J1IEPGoSwgUGjGsOG7nW5nIDksIFTDom4gQsOsbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1685065740179!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 35358936">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 35358936 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.auco@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.auco@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    06h00 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    6 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Aeon Mall Tân Phú</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    G27, Tầng trệt, AeonMall Tân Phú, 30 Tân Thắng, Phường Sơn Kỳ, Quận Tân Phú, TP. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1289319282846!2d106.61441282346661!3d10.801435858735111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b9535b60699%3A0x4737f3be8bd41d5b!2zw4ZPTiBNQUxMIFTDom4gUGjDuiBDZWxhZG9u!5e0!3m2!1svi!2s!4v1688097907594!5m2!1svi!2s"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 3847 2085">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 3847 2085 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.amtanphu@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.amtanphu@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    08h00 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    7 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Gigamall</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    L2-02, Tầng 2, Gigamall, 240-242 Phạm Văn Đồng, Phường Hiệp Bình Chánh, Tp. Thủ Đức,
+                                    TP. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.7824679709665!2d106.71898377346704!3d10.827952458244432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175291a71519df7%3A0xcbeec0265c71c79f!2zVHJ1bmcgVMOibSBUaMawxqFuZyBN4bqhaSBHaWdhbWFsbC9TZW5zZSBDaXR5!5e0!3m2!1svi!2sus!4v1688091756180!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 3636 3267">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 3636 3267 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.gigamall@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.gigamall@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    09h30 – 22h00 (Thứ hai – Thứ sáu), 09h00 – 22h00 (Thứ bảy, Chủ nhật)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    8 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Vinhomes Grand Park</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    01S13 Tòa S3.01, Vinhomes Grand Park, Phường Long Thạnh Mỹ, TP. Thủ Đức, TP. HCM
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7837.569395693038!2d106.721326!3d10.827782!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752932c476c6bf%3A0x7ebf5614a357eab0!2sBreadTalk%20Gigamall!5e0!3m2!1svi!2sus!4v1685065389978!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 36201623">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 36201623 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.vhgrandpark@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.vhgrandpark@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    06h00 - 21h30
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="cell">
+                            <div class="hb_ds_text">
+                                <div class="hb_ds_number">
+                                    9 </div>
+                                <div class="hb_ds_title">
+                                    <h3 class="h3">BreadTalk Sunrise Riverside</h3>
+                                </div>
+                            </div>
+                            <div class="hb_row_inner">
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    B-01.11 và B-01.12, Block B, Khu căn hộ Sunrise Riverside, Ấp 5, Xã Phước Kiển,
+                                    Huyện Nhà Bè, Tp. Hồ Chí Minh
+                                </div>
+                                <div class="hb_row">
+                                    <a class="fcy-popup" data-type="iframe" data-preload="false" data-width="640"
+                                        data-height="480"
+                                        href="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31361.302881900214!2d106.70395!3d10.721919!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6fd2eadc87%3A0x2e1394afb5d90acd!2sSunrise%20Riverside%20Block%20B!5e0!3m2!1svi!2sus!4v1685065238885!5m2!1svi!2sus"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade" rel="noopener noreferrer nofollow"
+                                        target="_blank">
+                                        <i class="fa-solid fa-location-crosshairs"></i>
+                                        Xem bản đồ </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="tel:028 36201607">
+                                        <i class="fa-solid fa-phone"></i>
+                                        028 36201607 </a>
+                                </div>
+                                <div class="hb_row">
+                                    <a href="mailto:ch.sunriseriverside@breadtalkvietnam.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        ch.sunriseriverside@breadtalkvietnam.com </a>
+                                </div>
+                                <div class="hb_row">
+                                    <i class="fa-solid fa-clock"></i>
+                                    06h30 - 22h00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="iconbox_section">
+            <div class="container pt-5 pb-5">
+                <div class="iconbox_items">
+                    <div class="iconbox_item">
+                        <span class="img">
+                            <img loading="lazy"
+                                src="https://breadtalkvietnam.com/wp-content/uploads/2023/05/Group-2.png">
+                        </span>
+                        <div class="iconbox_title">
+                            <h6 class="title">GIAO HÀNG 30 PHÚT</h6>
+                            <p>Cupcake sweet roll sweet dragée dragée.</p>
+                        </div>
+                    </div>
+                    <div class="iconbox_item">
+                        <span class="img">
+                            <img loading="lazy"
+                                src="https://breadtalkvietnam.com/wp-content/uploads/2023/05/Group-3.png">
+                        </span>
+                        <div class="iconbox_title">
+                            <h6 class="title">MIỄN PHÍ GIAO HÀNG</h6>
+                            <p>Loldivpop dessert donut marzipan cookie .</p>
+                        </div>
+                    </div>
+                    <div class="iconbox_item">
+                        <span class="img">
+                            <img loading="lazy"
+                                src="https://breadtalkvietnam.com/wp-content/uploads/2023/05/Group-4.png">
+                        </span>
+                        <div class="iconbox_title">
+                            <h6 class="title">UY TÍN - ĐÚNG HẸN</h6>
+                            <p>bonbon sesame snaps chocolate cake.</p>
+                        </div>
+                    </div>
+                    <div class="iconbox_item">
+                        <span class="img">
+                            <img loading="lazy"
+                                src="https://breadtalkvietnam.com/wp-content/uploads/2023/05/Group-5.png">
+                        </span>
+                        <div class="iconbox_title">
+                            <h6 class="title">ĐỘI NGŨ CHUYÊN NGHIỆP</h6>
+                            <p>Đơn hàng từ 5kg đến khi có thông báo mới</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script type="module">
+        import renderFooter from '../Scripts/footer.js';
+        import validateEmail from '../Scripts/validateEmail.js';
+        renderFooter();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var customSelects = document.querySelectorAll(".custom-select");
+
+            customSelects.forEach(function (customSelect) {
+                var selectElement = customSelect.querySelector("select");
+                var selectedDiv = document.createElement("div");
+                selectedDiv.classList.add("select-selected");
+                selectedDiv.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
+                customSelect.appendChild(selectedDiv);
+
+                var optionsDiv = document.createElement("div");
+                optionsDiv.classList.add("select-items", "select-hide");
+
+                for (var i = 1; i < selectElement.length; i++) {
+                    var optionDiv = document.createElement("div");
+                    optionDiv.innerHTML = selectElement.options[i].innerHTML;
+                    optionDiv.addEventListener("click", function (e) {
+                        var selectedOption = this.innerHTML;
+                        selectedDiv.innerHTML = selectedOption;
+                        selectElement.value = selectedOption;
+                        selectedDiv.click(); // Close the options
+                    });
+                    optionsDiv.appendChild(optionDiv);
+                }
+
+                customSelect.appendChild(optionsDiv);
+
+                selectedDiv.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    closeAllSelects(customSelect);
+                    optionsDiv.classList.toggle("select-hide");
+                    selectedDiv.classList.toggle("select-arrow-active");
+                });
+            });
+
+            function closeAllSelects(currentSelect) {
+                customSelects.forEach(function (select) {
+                    if (select !== currentSelect) {
+                        var optionsDiv = select.querySelector(".select-items");
+                        var selectedDiv = select.querySelector(".select-selected");
+                        optionsDiv.classList.add("select-hide");
+                        selectedDiv.classList.remove("select-arrow-active");
+                    }
+                });
+            }
+
+            document.addEventListener("click", function () {
+                closeAllSelects();
+            });
+
+        });
+    </script>
+
+    <script src="carousel.js"></script>
+
+</body>
+
+</html>

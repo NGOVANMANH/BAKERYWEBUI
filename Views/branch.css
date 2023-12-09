@@ -1,0 +1,196 @@
+.branch_title {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #F9A747;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.iconbox_section {
+    background: #FCF8F0;
+}
+
+.iconbox_items {
+    display: flex;
+    align-items: center;
+}
+
+.iconbox_item {
+    display: flex;
+    position: relative;
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.iconbox_item::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #4E4E4E;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.iconbox_item:last-child::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: transparent;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.iconbox_item .img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.iconbox_item .img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.iconbox_title .title {
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.iconbox_title p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.hb_address_location {
+    width: 100%;
+}
+
+.location-list {
+    margin-top: 1rem;
+    list-style-type: none;
+    padding-left: 0;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.location-list li {
+    cursor: pointer;
+    padding: 20px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    background: #F8F8F8;
+    margin-bottom: 15px;
+}
+
+.location-list li h6 {
+    color: currentColor;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.location-list li address {
+    font-size: 14px;
+    font-style: unset;
+    color: currentColor;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.location-list li i {
+    margin-right: 5px;
+}
+
+.location-list li span {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.location-list li:hover {
+    background: #F9A747;
+    color: #fff;
+}
+
+.cell {
+    background: #F8F8F8;
+    width: calc(100% / 3);
+    margin: 0 1rem;
+}
+
+.cell .hb_ds_text {
+    background: #2E425D;
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.cell .hb_ds_text .hb_ds_number {
+    background: #F9A747;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+
+.cell .hb_ds_text {
+    background: #2E425D;
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.cell .hb_ds_text .hb_ds_title .h3 {
+    font-size: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    padding-left: 15px;
+}
+
+.cell .hb_row_inner {
+    padding: 20px;
+}
+
+.cell .hb_row {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.cell .hb_row i {
+    margin-right: 5px;
+}
+
+.cell .hb_row a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+}

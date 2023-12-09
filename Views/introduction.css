@@ -48,8 +48,8 @@
     margin-bottom: 2rem;
 }
 
-.box_list_item_content_title_description {
+.box_list_item_content_description {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 25px;
 }

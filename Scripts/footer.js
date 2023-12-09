@@ -16,11 +16,13 @@ const renderFooter = () => {
                 <div class="container pt-5 pb-5">
                     <div class="row">
                         <div class="col" align="center">
-                            <a href="index.html" class="text-white">
-                                <img class="logo-image mb-4" src="../Images/Logo/PT-Talkindo-Selaksa-Anugrah-2.png"
-                                    alt="logo">
-                            </a>
-                            <span class="fs-3 text-white fw-normal">Bánh Tươi Ngon Mới Mỗi Ngày</span>
+                            <div class="site-logo">
+                                <a href="index.html" class="text-white position-relative">
+                                    <img class="logo-image mb-4" src="../Images/Logo/PT-Talkindo-Selaksa-Anugrah-2.png"
+                                        alt="logo">
+                                </a>
+                            </div>
+                            <span class="fs-3 text-white fw-light">Bánh Tươi Ngon Mới Mỗi Ngày</span>
                             <div class="row justify-content-center mt-4">
                                 <div class="col-md-auto icons">
                                     <a href="#">
