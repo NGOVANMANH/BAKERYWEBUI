@@ -194,3 +194,70 @@
     font-weight: 500;
     color: #000;
 }
+
+.goTop {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 24px;
+    border: 1px solid #8a8a8a;
+    color: #8a8a8a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 999;
+}
+
+.fb,
+.phone {
+    position: fixed;
+    bottom: 7rem;
+    right: 1rem;
+    font-size: 32px;
+    border-radius: 50%;
+    color: #1182fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 999;
+    animation: iconSkew 1s infinite ease-out;
+}
+
+@keyframes iconSkew {
+    0% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+
+    10% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    20% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    30% {
+        transform: rotate(-25deg) scale(1) skew(1deg);
+    }
+
+    40% {
+        transform: rotate(25deg) scale(1) skew(1deg);
+    }
+
+    50% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1) skew(1deg);
+    }
+}
+
+.phone {
+    color: red;
+    bottom: 13rem;
+}

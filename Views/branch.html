@@ -775,8 +775,11 @@
         </div>
     </div>
 
-    <div id="footer"></div>
+    <div class="goTop"><i class="fa-solid fa-arrow-up"></i></div>
+    <div class="fb"><i class="fa-brands fa-facebook-messenger"></i></div>
+    <div class="phone"><i class="fa-solid fa-phone-volume"></i></div>
 
+    <div id="footer"></div>
 
     <script src="../Scripts/header.js" type="module"></script>
 
@@ -784,6 +787,17 @@
         import renderFooter from '../Scripts/footer.js';
         import validateEmail from '../Scripts/validateEmail.js';
         renderFooter();
+    </script>
+
+    <script>
+        document
+            .querySelector(".goTop")
+            .addEventListener("click", function () {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            });
     </script>
 
     <script>
