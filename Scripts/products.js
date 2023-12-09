@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: "MUSHROOM CHEESE SAUSAGE",
@@ -624,5 +624,3 @@ const products = [
         image: "../Images/Product/dsc03428_optimized.png"
     },
 ]
-
-export default products;

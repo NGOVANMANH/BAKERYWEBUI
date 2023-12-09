@@ -35,17 +35,24 @@
 
 .carousel-control-prev,
 .carousel-control-next {
-    background-color: #c0bdbd;
-    width: 5vh;
-    height: 5vh;
+    opacity: 0.8;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #fff;
+    background-image: none;
     border-radius: 50%;
-    top: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #c8c8c8;
 }
 
-.carousel-control-prev {
-    transform: translateX(10vh);
-}
-
-.carousel-control-next {
-    transform: translateX(-10vh);
+.carousel-control-prev-icon i,
+.carousel-control-next i {
+    color: #000;
+    font-size: 24px;
 }
